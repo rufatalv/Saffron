@@ -5,7 +5,7 @@ const Features = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4200/features")
+    fetch("https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/features")
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
