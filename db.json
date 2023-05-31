@@ -1,0 +1,21 @@
+{
+    "features": [{
+            "id": 1,
+            "name": "100% təbii məhsullar",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            "image": "https://i.imgur.com/htiOYP3.png"
+        },
+        {
+            "id": 2,
+            "name": "Analoqsuz keyfiyyət",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            "image": "https://i.imgur.com/2LwWgLe.png"
+        },
+        {
+            "id": 3,
+            "name": "İxtisaslaştirilmiş satiş",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's",
+            "image": "https://i.imgur.com/F5Y4mFi.png"
+        }
+    ]
+} 
