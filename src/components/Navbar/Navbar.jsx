@@ -4,6 +4,7 @@ import logoIMG from "../../assets/img/header-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
+  faChevronUp,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -26,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="shadow-shadow relative z-10 py-3">
+    <nav className="shadow-shadow relative z-30 py-3">
       <div className="container">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -35,10 +36,13 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="font-montserrat flex items-center gap-6 font-semibold text-xs">
-            <Link
+            <div
               to="#"
-              onClick={toggleDropdown}
-              className="relative flex gap-1 items-center cursor-pointer"
+              onMouseEnter={handleDropdownOpen}
+              onMouseLeave={handleDropdownClose}
+              className={`relative flex gap-1 ${
+                isDropdownOpen ? "h-14" : ""
+              } items-center cursor-pointer`}
             >
               Haqqımızda
               <FontAwesomeIcon fontSize={8} icon={faChevronDown} />
@@ -90,7 +94,7 @@ const Navbar = () => {
                   Üstünlüklərimiz
                 </Link>
               </div>
-            </Link>
+            </div>
             <Link
               className="hover:border-b-[1.5px] hover:border-green-400 cursor-pointer "
               to="#"
@@ -135,12 +139,9 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="font-montserrat flex items-center gap-6 font-semibold text-xs">
-            <Link>
+            <Link to="#">
               Az
               <FontAwesomeIcon fontSize={8} icon={faChevronDown} />
-            </Link>
-            <Link>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
             </Link>
           </div>
         </div>

@@ -1,34 +1,21 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Product from "../Product/Product";
+import { useEffect, useState } from "react";
 import Button from "../../UI/Button";
-
+import { Product } from "../index";
 const Products = () => {
   const [data, setData] = useState([]);
   const [activeTab, setActiveTab] = useState("firstTab");
-
+  const fetchData = () => {
+    fetch("https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/products")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  };
   useEffect(() => {
     fetchData();
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        "https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/products"
-      );
-      setData(response.data);
-    } catch (error) {
-      console.log("Error fetching data:", error);
-    }
-  };
-
+  const filteredData = data.slice(0, 3);
   const handleTabClick = (tab) => {
-    setActiveTab(tab);
+    console.log(tab);
   };
-
-  const filteredData =
-    activeTab === "firstTab" ? data.slice(0, 3) : data.slice(3);
-
   return (
     <div className="">
       <div className="container text-center flex flex-col items-center">
@@ -41,21 +28,15 @@ const Products = () => {
         </p>
         <div className="flex gap-5 mt-12 mb-20">
           <Button
-            styles={
-              activeTab === "firstTab"
-                ? "bg-purple-400 hover:bg-purple-400 text-white"
-                : "bg-purple-400/10 hover:bg-purple-400/60 hover:text-white transition-all text-purple-400"
-            }
-            onClick={() => handleTabClick("firstTab")}
+            styles={"bg-purple-400 hover:bg-purple-400 text-white"}
+            onClick={handleTabClick("firstTab")}
           >
             Gübrələr
           </Button>
           <Button
-            onClick={() => handleTabClick("secondTab")}
+            onClick={handleTabClick("secondTab")}
             styles={
-              activeTab === "secondTab"
-                ? "bg-purple-400 hover:bg-purple-400 text-white"
-                : "bg-purple-400/10 hover:bg-purple-400/60 hover:text-white transition-all text-purple-400"
+              "bg-purple-400/10 hover:bg-purple-400/60 hover:text-white transition-all text-purple-400"
             }
           >
             Bitki mühafizə məhsulları

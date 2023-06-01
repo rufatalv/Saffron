@@ -1,13 +1,15 @@
-import { Hero, Navbar, Features, Toolbar } from "./components";
+import { Hero, Navbar, Features, Toolbar, Products, Services } from "./components";
 
 function App() {
   return (
-    <>
+    <div className="relative overflow-x-hidden">
       <Toolbar />
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <Features />
-    </>
+      <Products />
+      <Services />
+    </div>
   );
 }
 
