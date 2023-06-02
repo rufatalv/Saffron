@@ -6,3 +6,6 @@ export { default as Feature } from "./Feature/Feature";
 export { default as Products } from "./Products/Products";
 export { default as Product } from "./Product/Product";
 export { default as Services } from "./Services/Services";
+export { default as Preloader } from "./Preloader/Preloader";
+export { default as LatestProducts } from "./LatestProducts/LatestProducts";
+export { default as LatestProduct } from "./LatestProduct/LatestProduct";

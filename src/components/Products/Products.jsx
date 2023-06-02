@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Skeleton from "react-loading-skeleton";
 import Product from "../Product/Product";
 import Button from "../../UI/Button";
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [activeTab, setActiveTab] = useState("firstTab");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -17,8 +19,10 @@ const Products = () => {
         "https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/products"
       );
       setData(response.data);
+      setLoading(false);
     } catch (error) {
       console.log("Error fetching data:", error);
+      setLoading(false);
     }
   };
 
@@ -62,11 +66,30 @@ const Products = () => {
           </Button>
         </div>
         <div className="flex gap-9 mb-[172px]">
-          {filteredData.map((item, idx) => (
-            <Product data={item} key={idx} />
-          ))}
+          {loading ? (
+            // Display skeleton placeholders while loading
+            <>
+              <SkeletonProduct />
+              <SkeletonProduct />
+              <SkeletonProduct />
+            </>
+          ) : (
+            // Display products when loaded
+            filteredData.map((item, idx) => (
+              <Product data={item} key={idx} />
+            ))
+          )}
         </div>
       </div>
+    </div>
+  );
+};
+
+const SkeletonProduct = () => {
+  return (
+    <div className="max-w-[375px]">
+      <Skeleton height={200} />
+      <Skeleton height={50} width={150} style={{ margin: "10px auto" }} />
     </div>
   );
 };
