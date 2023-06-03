@@ -12,10 +12,9 @@ const LatestProducts = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/latestproducts"
+        "https://stormy-bonnet-bear.cyclic.app/productslatest"
       );
       setData(response.data);
-      console.log(response.data);
     } catch (error) {
       console.log("Error fetching data:", error);
     }
@@ -32,7 +31,7 @@ const LatestProducts = () => {
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry
       </p>
-      <div className="flex gap-5 mt-[70px]">
+      <div className="flex gap-16 xl:gap-5 mt-[110px] xl:flex-nowrap flex-wrap justify-center align-middle items-center">
         {data.map((item, idx) => (
           <LatestProduct key={idx} data={item} />
         ))}

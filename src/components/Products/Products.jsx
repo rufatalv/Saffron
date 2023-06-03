@@ -16,7 +16,7 @@ const Products = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/products"
+        "https://stormy-bonnet-bear.cyclic.app/products"
       );
       setData(response.data);
       setLoading(false);
@@ -75,9 +75,7 @@ const Products = () => {
             </>
           ) : (
             // Display products when loaded
-            filteredData.map((item, idx) => (
-              <Product data={item} key={idx} />
-            ))
+            filteredData.map((item, idx) => <Product data={item} key={idx} />)
           )}
         </div>
       </div>
@@ -88,7 +86,7 @@ const Products = () => {
 const SkeletonProduct = () => {
   return (
     <div className="max-w-[375px]">
-      <Skeleton height={200} />
+      <Skeleton height={370} width={367} />
       <Skeleton height={50} width={150} style={{ margin: "10px auto" }} />
     </div>
   );

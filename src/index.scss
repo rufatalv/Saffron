@@ -30,3 +30,9 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
+.swiper-container {
+  position: relative;
+}
+.swiper-wrapper{
+  align-items: center;
+}

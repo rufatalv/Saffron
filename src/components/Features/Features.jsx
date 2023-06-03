@@ -11,7 +11,7 @@ const Features = () => {
   useEffect(() => {
     axios
       .get(
-        "https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/features"
+        "https://stormy-bonnet-bear.cyclic.app/features"
       )
       .then((response) => {
         setData(response.data);

@@ -12,7 +12,7 @@ const Services = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://0b40386c-03d9-4e62-91e5-d60c317525b7.mock.pstmn.io/services"
+        "https://mocki.io/v1/37afdbde-be9d-4a68-b702-028bf9950d64"
       );
       setData(response.data);
     } catch (error) {

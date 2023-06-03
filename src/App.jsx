@@ -5,14 +5,16 @@ import {
   Toolbar,
   Products,
   Services,
-  Preloader,
   LatestProducts,
+  Partners,
+  Footer,
+  Contacts,
 } from "./components";
 import "react-loading-skeleton/dist/skeleton.css";
 function App() {
   return (
     <div className="relative overflow-x-hidden">
-      <Preloader />
+      {/* <Preloader />  */}
       <Toolbar />
       <Navbar />
       <Hero />
@@ -20,6 +22,9 @@ function App() {
       <Products />
       <Services />
       <LatestProducts />
+      <Partners />
+      <Contacts />
+      {/* <Footer /> */}
     </div>
   );
 }

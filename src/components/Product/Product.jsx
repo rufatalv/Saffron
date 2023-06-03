@@ -16,7 +16,7 @@ const Product = ({ data, styles }) => {
       ) : (
         // Display skeleton for loading state
         <>
-          <Skeleton height={200} />
+          <Skeleton height={250} width={250} />
           <Skeleton height={50} width={150} style={{ margin: "10px auto" }} />
         </>
       )}
