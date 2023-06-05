@@ -34,7 +34,7 @@ const Products = () => {
     activeTab === "firstTab" ? data.slice(0, 3) : data.slice(3);
 
   return (
-    <div className="">
+    <div className="" id="products">
       <div className="container text-center flex flex-col items-center">
         <h1 className="text-4xl text-purple-400 font-primary">Məhsullarımız</h1>
         <p className="font-montserrat text-green-500 mt-4 text-base max-w-[745px]">

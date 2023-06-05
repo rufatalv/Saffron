@@ -10,12 +10,6 @@ import {
 import NavLink from "../NavLink";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <nav className="shadow-shadow relative z-30 py-3">
       <div className="container">
@@ -27,67 +21,51 @@ const Navbar = () => {
           </div>
           <div className="font-montserrat flex items-center gap-6 font-semibold text-xs">
             <NavLink
-              title="Haqqimizda"
+              offset={-200}
               links={[
-                {
-                  to: "#",
-                  title: "Saffron Agro MMC",
-                },
-                { title: "Rəhbərlik", to: "#" },
-                { title: "İşçilər", to: "#" },
-                { title: "Sifariş", to: "#" },
-                { title: "Daşınma", to: "#" },
-                { title: "Üstünlüklərimiz", to: "#" },
+                { title: "Saffron Agro MMC", to: "" },
+                { title: "Rəhbərlik", to: "" },
+                { title: "İşçilər", to: "" },
+                { title: "Sifariş", to: "" },
+                { title: "Daşınma", to: "" },
+                { title: "Üstünlüklərimiz", to: "" },
               ]}
-            />
+            >
+              Haqqımızda
+            </NavLink>
             <NavLink
-              title="Məhsullarımız"
+              offset={-100}
               links={[
-                {
-                  to: "#",
-                  title: "Saffron Agro MMC",
-                },
-                { title: "Rəhbərlik", to: "#" },
-                { title: "İşçilər", to: "#" },
-                { title: "Sifariş", to: "#" },
-                { title: "Daşınma", to: "#" },
-                { title: "Üstünlüklərimiz", to: "#" },
+                { title: "Saffron Agro MMC", to: "" },
+                { title: "Rəhbərlik", to: "" },
+                { title: "İşçilər", to: "" },
+                { title: "Sifariş", to: "" },
+                { title: "Daşınma", to: "" },
+                { title: "Üstünlüklərimiz", to: "" },
               ]}
-            />
+              to={"products"}
+            >
+              Məhsullarımız
+            </NavLink>
             <NavLink
-              title="Xidmətlərimiz"
+              offset={-50}
               links={[
-                {
-                  to: "#",
-                  title: "Saffron Agro MMC",
-                },
-                { title: "Rəhbərlik", to: "#" },
-                { title: "İşçilər", to: "#" },
-                { title: "Sifariş", to: "#" },
-                { title: "Daşınma", to: "#" },
-                { title: "Üstünlüklərimiz", to: "#" },
+                { title: "Saffron Agro MMC", to: "" },
+                { title: "Rəhbərlik", to: "" },
+                { title: "İşçilər", to: "" },
+                { title: "Sifariş", to: "" },
+                { title: "Daşınma", to: "" },
+                { title: "Üstünlüklərimiz", to: "" },
               ]}
-              to="#"
-            />
-            <NavLink
-              title="Əməkdaşlıq və tərəfdaşlar"
-              links={[
-                {
-                  to: "#",
-                  title: "Saffron Agro MMC",
-                },
-                { title: "Rəhbərlik", to: "#" },
-                { title: "İşçilər", to: "#" },
-                { title: "Sifariş", to: "#" },
-                { title: "Daşınma", to: "#" },
-                { title: "Üstünlüklərimiz", to: "#" },
-              ]}
-              to="#"
-            />
-            <NavLink title="Təlim və tədbirlər" to="#" />
-            <NavLink title="Xəbərlər" to="#" />
-            <NavLink title="Qalereya" to="#" />
-            <NavLink title="Əlaqə" to="#" />
+              to={"services"}
+            >
+              Xidmətlərimiz
+            </NavLink>
+            <NavLink>Əməkdaşlıq və tərəfdaşlar</NavLink>
+            <NavLink>Təlim və tədbirlər</NavLink>
+            <NavLink>Xəbərlər</NavLink>
+            <NavLink>Qalereya</NavLink>
+            <NavLink>Əlaqə</NavLink>
           </div>
           <div className="font-montserrat flex items-center gap-6 font-semibold text-xs">
             <Link to="#">

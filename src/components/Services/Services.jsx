@@ -20,7 +20,7 @@ const Services = () => {
     }
   };
   return (
-    <div className="text-center flex-col items-center relative container max-w-[1172px] flex mt-24 mb-32 z-50">
+    <div className="text-center flex-col items-center relative container max-w-[1172px] flex mt-24 mb-32 z-50" id="services">
       <h1 className="text-4xl text-purple-400 font-primary">Xidmətlərimiz</h1>
       <p className="font-montserrat text-green-500 mt-4 text-base max-w-[420px]">
         Lorem Ipsum is simply dummy text of the printing and typesetting

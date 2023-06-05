@@ -5,7 +5,7 @@ const Preloader = ({ isLoading }) => {
     <div
       className={`h-screen w-full transition-all duration-1000 ease-out ${
         !isLoading && "-translate-y-[1200px]"
-      } absolute z-[9999] bg-green-400`}
+      } fixed z-[9999] bg-green-400`}
     >
       <div className="relative w-full h-full">
         <img
