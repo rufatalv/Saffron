@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Contacts = () => {
   return (
-    <div>Contacts</div>
-  )
-}
+    <div className="mt-[72px">
+      <div className="container">
+        
+      </div>
+    </div>
+  );
+};
 
-export default Contacts
+export default Contacts;
