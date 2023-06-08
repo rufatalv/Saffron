@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Skeleton from "react-loading-skeleton";
 import Product from "../Product/Product";
 import Button from "../../UI/Button";
 
 const Products = () => {
   const [data, setData] = useState([]);
   const [activeTab, setActiveTab] = useState("firstTab");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -19,10 +17,8 @@ const Products = () => {
         "https://stormy-bonnet-bear.cyclic.app/products"
       );
       setData(response.data);
-      setLoading(false);
     } catch (error) {
       console.log("Error fetching data:", error);
-      setLoading(false);
     }
   };
 
@@ -35,9 +31,9 @@ const Products = () => {
 
   return (
     <div className="" id="products">
-      <div className="container text-center flex flex-col items-center">
-        <h1 className="text-4xl text-purple-400 font-primary">Məhsullarımız</h1>
-        <p className="font-montserrat text-green-500 mt-4 text-base max-w-[745px]">
+      <div className="container relative z-[70] text-center flex flex-col items-center px-5 xl:px-0">
+        <h1 className="lg:text-4xl text-3xl text-purple-400 font-primary">Məhsullarımız</h1>
+        <p className="font-montserrat text-green-500 mt-4 text-sm lg:text-base lg:max-w-[745px]">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -65,29 +61,11 @@ const Products = () => {
             Bitki mühafizə məhsulları
           </Button>
         </div>
-        <div className="flex gap-9 mb-[172px]">
-          {loading ? (
-            // Display skeleton placeholders while loading
-            <>
-              <SkeletonProduct />
-              <SkeletonProduct />
-              <SkeletonProduct />
-            </>
-          ) : (
-            // Display products when loaded
-            filteredData.map((item, idx) => <Product data={item} key={idx} />)
-          )}
+        <div className="flex gap-4 justify-center flex-wrap xl:flex-nowrap mb-[172px]">
+          {filteredData &&
+            filteredData.map((item, idx) => <Product data={item} key={idx} />)}
         </div>
       </div>
-    </div>
-  );
-};
-
-const SkeletonProduct = () => {
-  return (
-    <div className="max-w-[375px]">
-      <Skeleton height={370} width={367} />
-      <Skeleton height={50} width={150} style={{ margin: "10px auto" }} />
     </div>
   );
 };

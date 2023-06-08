@@ -32,7 +32,7 @@ function App() {
       <LatestProducts />
       <Partners />
       <Contacts />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

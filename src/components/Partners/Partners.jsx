@@ -11,7 +11,7 @@ SwiperCore.use([]);
 
 const Partners = () => {
   return (
-    <div className="bg-[#FFFAFD] py-[100px]">
+    <div className="bg-[#FFFAFD] py-[100px] px-5 xl:px-0" id="partners">
       <div className="container text-center  flex-col justify-center">
         <h1 className="text-4xl text-purple-400 font-primary">
           Əməkdaşlarımız
@@ -24,6 +24,14 @@ const Partners = () => {
           spaceBetween={50}
           slidesPerView={10}
           loopedSlides={10}
+          breakpoints={{
+            320: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 10,
+            },
+          }}
         >
           {partnersData.map((data) => (
             <SwiperSlide key={data.id}>
