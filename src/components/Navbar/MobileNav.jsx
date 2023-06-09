@@ -33,7 +33,7 @@ const MobileNav = () => {
           >
             <FontAwesomeIcon icon={faXmark} className="text-white text-3xl" />
           </button>
-          <ul className="flex flex-col gap-2">
+          <ul className="mt-4 flex flex-col gap-3">
             <li>
               <NavLinkMobile
                 offset={-200}
