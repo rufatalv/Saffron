@@ -11,6 +11,7 @@ import {
   Preloader,
   Footer,
   Contacts,
+  MobileNav,
 } from "./components";
 import "react-loading-skeleton/dist/skeleton.css";
 function App() {
@@ -22,9 +23,10 @@ function App() {
   }, []);
   return (
     <div className="relative overflow-x-hidden">
-      <Preloader isLoading={loading} />
+      {/* <Preloader isLoading={loading} /> */}
       <Toolbar />
       <Navbar />
+      <MobileNav />
       <Hero />
       <Features />
       <Products />
@@ -32,7 +34,7 @@ function App() {
       <LatestProducts />
       <Partners />
       <Contacts />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

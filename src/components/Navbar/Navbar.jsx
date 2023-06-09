@@ -7,19 +7,19 @@ import {
   faChevronUp,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
-import NavLink from "../NavLink";
+import NavLink from "../NavLink/NavLink";
 
 const Navbar = () => {
   return (
-    <nav className="shadow-shadow relative z-30 py-3">
-      <div className="container">
+    <nav className="hidden fixed top-0 w-full lg:block shadow-shadow bg-white z-[400] py-3">
+      <div className="px-4xl:px-0 xl:container">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="#" className="text-white font-bold text-xl">
               <img src={logoIMG} />
             </Link>
           </div>
-          <div className="font-montserrat flex items-center gap-6 font-semibold text-xs">
+          <div className="font-montserrat flex items-center gap-2 xl:gap-6 font-semibold text-xs">
             <NavLink
               offset={-200}
               links={[

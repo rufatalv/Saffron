@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Toolbar = () => {
   return (
-    <div className="bg-green-400 hidden z-20 relative font-montserrat font-semibold text-xs md:block text-white">
+    <div className="bg-green-400 hidden z-20 relative font-montserrat font-semibold text-xs lg:block text-white">
       <div className="container flex w-full py-3 px-[24px] lg:px-0">
         <div className="flex gap-2 hover:cursor-pointer basis-4/12 lg:basis-3/12 items-center">
           <FontAwesomeIcon fontSize={"16px"} icon={faLocationDot} />
