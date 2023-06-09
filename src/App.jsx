@@ -23,7 +23,7 @@ function App() {
   }, []);
   return (
     <div className="relative overflow-x-hidden">
-      {/* <Preloader isLoading={loading} /> */}
+      <Preloader isLoading={loading} />
       <Toolbar />
       <Navbar />
       <MobileNav />
